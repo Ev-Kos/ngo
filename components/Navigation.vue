@@ -1,10 +1,11 @@
 <template>
   <nav class="navigation">
-    <Logo /> 
-    <nuxt-link class="link" to="/">Main</nuxt-link>
-    <nuxt-link class="link" to="/about">About page</nuxt-link>
-    <button class="button">Enter</button>
-    <!--<Modal />-->
+    <Logo :title="logoText"/>
+    <nuxt-link v-for='elem in linkArray' class="link" :to="elem.to" :key="elem.text">
+      {{ elem.text }}
+    </nuxt-link>
+    <button class="button">{{ text }}</button>
+    <Modal v-show="false"/>
   </nav>
 </template>
 
@@ -13,6 +14,16 @@
   export default {
     components: {
       Logo
+    },
+    data() {
+      return {
+        text: 'Enter',
+        logoText: 'НКО-проект',
+        linkArray: [
+          {to: '/', text: 'Main'},
+          {to: '/about', text: 'About page'}
+        ]
+      }
     }
   }
 </script>
