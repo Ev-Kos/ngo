@@ -1,7 +1,8 @@
+
 <template>
   <div class="main">
     <h1>Nuxt JS</h1>
-    <p>Layout and Nuxt component</p>
+    <p>And this is about page</p>
   </div>
 </template>
 
@@ -17,9 +18,14 @@
 
 <style scoped>
 .main {
-  padding: 50px 90px;
-  background: rgba(255,255,255, 0.8);
-  border-radius: 4px;
   text-align: left;
+}
+
+p {
+  color: red;
+}
+
+h1 {
+  color: lightblue;
 }
 </style>
