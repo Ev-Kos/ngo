@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="text">
     I am on id
   </div>
 </template>
@@ -10,6 +10,9 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+.text {
+  margin-top: 100px;
+}
 
 </style>

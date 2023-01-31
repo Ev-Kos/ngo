@@ -21,6 +21,7 @@
 
 <style scoped>
   .input {
+    margin-top: 200px;
     width: 100px;
     height: 30px;
     border: 1px solid red;
