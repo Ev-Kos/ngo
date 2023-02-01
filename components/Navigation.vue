@@ -4,8 +4,9 @@
     <nuxt-link v-for='elem in linkArray' class="link" :to="elem.to" :key="elem.text">
       {{ elem.text }}
     </nuxt-link>
-    <button class="button">{{ text }}</button>
-    <Modal v-show="false"/>
+    <button class="button" @click="toggleModal">{{ text }}</button>
+    <input type="checkbox" v-model="showModal">
+    <Modal v-show="showModal" :onToggle="toggleModal"/>
   </nav>
 </template>
 
@@ -22,7 +23,13 @@
         linkArray: [
           {to: '/', text: 'Main'},
           {to: '/about', text: 'About page'}
-        ]
+        ],
+        showModal: false
+      }
+    },
+    methods: {
+      toggleModal() {
+        this.showModal = !this.showModal;
       }
     }
   }
